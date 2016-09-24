@@ -10,6 +10,9 @@
 		2C64967B6E7F64E45B12D38D /* Pods_StudentLinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AF3B38A3C2DA40E2F5EB6F /* Pods_StudentLinkUITests.framework */; };
 		30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */; };
 		30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CCC1D973B9B0007CD81 /* Main.storyboard */; };
+		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
+		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
+		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
 		7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EB0932F1D97387200FD6217 /* GoogleService-Info.plist */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
@@ -35,6 +38,9 @@
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7E0A7CE51D973EE200315584 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EB0932F1D97387200FD6217 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EC2E8361D97274200248BD0 /* StudentLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC2E8391D97274200248BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A38115DAF8549E9AB0DE52 /* Pods_StudentLink.framework in Frameworks */,
+				7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */,
+				7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */,
+				7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +82,9 @@
 		351E22E935AF064413765C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E0A7CE51D973EE200315584 /* Bolts.framework */,
+				7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */,
+				7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */,
 				4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */,
 				81AF3B38A3C2DA40E2F5EB6F /* Pods_StudentLinkUITests.framework */,
 			);
@@ -517,6 +529,10 @@
 			baseConfigurationReference = A8A38D40D498274892667242 /* Pods-StudentLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StudentLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.StudentLink.StudentLink;
@@ -529,6 +545,10 @@
 			baseConfigurationReference = 6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StudentLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.StudentLink.StudentLink;
