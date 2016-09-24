@@ -13,6 +13,11 @@
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
+		7E68FD051D97409A00809FB5 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68FD041D97409A00809FB5 /* LoginView.storyboard */; };
+		7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD061D97417900809FB5 /* LoginViewController.swift */; };
+		7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD081D97453200809FB5 /* scheduleViewController.swift */; };
+		7E68FD0B1D97455600809FB5 /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */; };
+		7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */; };
 		7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EB0932F1D97387200FD6217 /* GoogleService-Info.plist */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
@@ -41,6 +46,11 @@
 		7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		7E0A7CE51D973EE200315584 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7E68FD041D97409A00809FB5 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = View/LoginView.storyboard; sourceTree = "<group>"; };
+		7E68FD061D97417900809FB5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		7E68FD081D97453200809FB5 /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scheduleViewController.swift; path = Controllers/scheduleViewController.swift; sourceTree = "<group>"; };
+		7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
+		7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassModel.swift; path = Models/ClassModel.swift; sourceTree = "<group>"; };
 		7EB0932F1D97387200FD6217 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EC2E8361D97274200248BD0 /* StudentLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC2E8391D97274200248BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +167,7 @@
 		7EC2E85E1D9727DF00248BD0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -165,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				30AA4CCC1D973B9B0007CD81 /* Main.storyboard */,
+				7E68FD041D97409A00809FB5 /* LoginView.storyboard */,
+				7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -173,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */,
+				7E68FD061D97417900809FB5 /* LoginViewController.swift */,
+				7E68FD081D97453200809FB5 /* scheduleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,8 +306,10 @@
 			files = (
 				7EC2E8471D97274200248BD0 /* LaunchScreen.storyboard in Resources */,
 				7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */,
+				7E68FD0B1D97455600809FB5 /* ScheduleStoryboard.storyboard in Resources */,
 				7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */,
 				30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */,
+				7E68FD051D97409A00809FB5 /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */,
+				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
+				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
 				30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
