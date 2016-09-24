@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,29 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-Ns-LGV">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-Ns-LGV">
                                 <rect key="frame" x="289" y="386" width="81" height="30"/>
-                                <state key="normal" title="Other Login"/>
+                                <state key="normal" title="Log in/ Sign up"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Student Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-LL-BE5">
                                 <rect key="frame" x="253" y="28" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-zT-erx">
                                 <rect key="frame" x="219" y="95" width="240" height="128"/>
-                                <color key="backgroundColor" patternImage="43433FF2-AA1A-46AE-B570-1BD0568B590B" colorSpace="pattern"/>
+                                <color key="backgroundColor" patternImage="45114086-DA65-4C45-BA16-BA0B0D23C235" colorSpace="pattern"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6BF-uM-1v8"/>
                                     <constraint firstAttribute="height" constant="128" id="S6A-l5-DTN"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C04-Yt-LVM">
+                                <rect key="frame" x="306" y="348" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L1z-Oq-VhW"/>
+                                    <constraint firstAttribute="width" constant="46" id="tZT-Eb-iFP"/>
+                                </constraints>
+                                <state key="normal" title="Facebook login"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="ZEg-BD-93w" eventType="touchUpInside" id="Jlc-Yf-b5K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UUV-zT-erx" firstAttribute="top" secondItem="eBk-LL-BE5" secondAttribute="bottom" constant="46" id="Gx1-GE-UmE"/>
+                            <constraint firstItem="LI3-Ns-LGV" firstAttribute="top" secondItem="C04-Yt-LVM" secondAttribute="bottom" constant="8" id="k8a-PN-KZd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -53,7 +65,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="43433FF2-AA1A-46AE-B570-1BD0568B590B" width="512" height="512">
+        <image name="45114086-DA65-4C45-BA16-BA0B0D23C235" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -17540,7 +17552,7 @@ AQAAAQYAAwAAAAEAAgAAAREABAAAAAgAEADeARIAAwAAAAEAAQAAARUAAwAAAAEABAAAARYAAwAAAAEA
 QAAAARcABAAAAAgAEAC+ARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAQAEAD+h3MABwAADEgA
 EAEGAAAAAAAIAAgACAAIAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAAAIAAIACAAEAAgA
 BgAIAAgACAAKAAgADAAIAA4ACAABAAEAAQABAAAMSExpbm8CEAAAbW50clJHQiBYWVogB84AAgAJAAYA
-MQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAAAAEAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAA
+MQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARY3BydAAAAVAAAAAzZGVzYwAAAYQA
 AABsd3RwdAAAAfAAAAAUYmtwdAAAAgQAAAAUclhZWgAAAhgAAAAUZ1hZWgAAAiwAAAAUYlhZWgAAAkAA
 AAAUZG1uZAAAAlQAAABwZG1kZAAAAsQAAACIdnVlZAAAA0wAAACGdmlldwAAA9QAAAAkbHVtaQAAA/gA
