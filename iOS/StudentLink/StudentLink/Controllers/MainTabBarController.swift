@@ -23,8 +23,9 @@ class MainTabBarController: UITabBarController {
         
         setupNavigationControllers()
         
+        
         self.viewControllers = navigationControllers
-        self.tabBar.tintColor = UIColor.lightGrayColor()
+        self.tabBar.tintColor = UIColor.blueColor()
     }
     
     func createViewControllers() {
