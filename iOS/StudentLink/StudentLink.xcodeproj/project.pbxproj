@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C64967B6E7F64E45B12D38D /* Pods_StudentLinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AF3B38A3C2DA40E2F5EB6F /* Pods_StudentLinkUITests.framework */; };
+		30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */; };
+		30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CCC1D973B9B0007CD81 /* Main.storyboard */; };
 		7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EB0932F1D97387200FD6217 /* GoogleService-Info.plist */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
+		30AA4CCC1D973B9B0007CD81 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = View/Main.storyboard; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		7EC2E85F1D9727EE00248BD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30AA4CCC1D973B9B0007CD81 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 		7EC2E8601D9727F400248BD0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				7EC2E84A1D97274200248BD0 /* Frameworks */,
 				7EC2E84B1D97274200248BD0 /* Resources */,
 				640658555932C2F01A315329 /* [CP] Copy Pods Resources */,
+				F4155CF74E678D98769D83C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +280,7 @@
 				7EC2E8471D97274200248BD0 /* LaunchScreen.storyboard in Resources */,
 				7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */,
 				7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */,
+				30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		640658555932C2F01A315329 /* [CP] Copy Pods Resources */ = {
@@ -328,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B53EBA5BDEEC6653E0A20ECB /* [CP] Copy Pods Resources */ = {
@@ -361,6 +369,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4155CF74E678D98769D83C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,6 +393,7 @@
 			files = (
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
+				30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

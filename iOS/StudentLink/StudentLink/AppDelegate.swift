@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UIViewController()
+        window?.rootViewController = MainTabBarController.create()
         
         FIRApp.configure()
         
