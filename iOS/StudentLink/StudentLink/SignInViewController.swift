@@ -70,7 +70,9 @@ class SignInViewController: UIViewController {
                     
                     if let uid = user?.uid {
                         StudentLinkUserDefaults.setUID(uid)
+                        DataService.sharedInstance.createFirebaseUser(uid, provider: "Email")
                     }
+                    
                 })
             }
             self.moveToMainScreen()
@@ -96,7 +98,7 @@ class SignInViewController: UIViewController {
                 loginButtonClicked()
                 return
             case .Signup:
-                // signup with facebook and grab user data
+//                DataService.sharedInstance.createFirebaseUser(uid, provider: "Facebook")
                 return
             }
         }

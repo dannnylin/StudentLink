@@ -14,6 +14,7 @@
 		30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */; };
 		30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */; };
 		30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */; };
+		30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD61D9763B10007CD81 /* DataService.swift */; };
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
@@ -49,6 +50,7 @@
 		30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLinkUserDefaults.swift; sourceTree = "<group>"; };
 		30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
+		30AA4CD61D9763B10007CD81 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		7EC2E8621D9727FD00248BD0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				30AA4CD61D9763B10007CD81 /* DataService.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */,
 				30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */,
+				30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
 				30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */,
 				30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */,
