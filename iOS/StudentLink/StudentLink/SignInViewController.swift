@@ -92,16 +92,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func facebookButtonPressed(sender: UIButton) {
-        if let mode = mode {
-            switch mode {
-            case .Login:
-                loginButtonClicked()
-                return
-            case .Signup:
-//                DataService.sharedInstance.createFirebaseUser(uid, provider: "Facebook")
-                return
-            }
-        }
+        loginButtonClicked()
     }
     
     func loginButtonClicked() {
@@ -124,10 +115,17 @@ class SignInViewController: UIViewController {
                             print(error)
                         }
                         
-                        // move to home
-                        //                        self.view.window?.rootViewController = MainTabBarController.create()
-                        let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController.create())
-                        self.presentViewController(scheduleNavigationController, animated: true, completion: nil)
+                        if let uid = user?.uid, mode = self.mode {
+                            switch mode {
+                            case .Signup:
+                                DataService.sharedInstance.createFirebaseUser(uid, provider: "Facebook")
+                                let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController.create())
+                                self.presentViewController(scheduleNavigationController, animated: true, completion: nil)
+                            case .Login:
+                                self.moveToMainScreen()
+                            }
+                            StudentLinkUserDefaults.setUID(uid)
+                        }
                     }
                 }
             }
