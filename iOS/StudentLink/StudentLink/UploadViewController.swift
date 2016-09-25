@@ -60,7 +60,7 @@ class UploadViewController: UIViewController {
         if imageArray.count != 0 {
             notesImageView.image = imageArray[imageIndex]
             pageControl.numberOfPages = imageArray.count
-            pageControl.currentPage = imageArray.count
+            pageControl.currentPage = imageIndex
         }
     }
     
@@ -109,6 +109,24 @@ class UploadViewController: UIViewController {
         self.presentViewController(changePictureActionSheet, animated: true, completion: nil)
         
     }
+    
+    @IBAction func deletePictureAction(sender: UIButton) {
+        if imageArray.count > 1 {
+            notesImageView.image = imageArray[imageIndex-1]
+            imageArray.removeAtIndex(imageIndex)
+            imageIndex -= 1
+            pageControl.currentPage -= 1
+            pageControl.numberOfPages -= 1
+        } else {
+            notesImageView.image = nil
+            imageArray.removeAll()
+            pageControl.currentPage = 0
+            pageControl.numberOfPages = 0
+            imageIndex = 0
+        }
+    }
+    
+    
     
     class func create() -> UploadViewController {
         let storyboard = UIStoryboard(name: "Upload", bundle: nil)

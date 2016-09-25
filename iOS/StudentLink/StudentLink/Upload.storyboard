@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -64,6 +64,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaF-QP-1GZ">
+                                <rect key="frame" x="252" y="562" width="97" height="30"/>
+                                <state key="normal" title="Delete Picture"/>
+                                <connections>
+                                    <action selector="deletePictureAction:" destination="Ifg-tr-otW" eventType="touchUpInside" id="MrM-6H-jBu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,12 +79,14 @@
                             <constraint firstItem="Tlx-hk-vKf" firstAttribute="top" secondItem="peU-Ge-Vix" secondAttribute="bottom" constant="47" id="Avk-Cp-X81"/>
                             <constraint firstItem="9nO-7j-mLX" firstAttribute="top" secondItem="Nlm-qO-vM4" secondAttribute="bottom" constant="8" id="B8M-UF-Ldt"/>
                             <constraint firstItem="Tlx-hk-vKf" firstAttribute="top" secondItem="Dap-36-L5E" secondAttribute="bottom" constant="10" id="BX9-ix-Tzh"/>
+                            <constraint firstItem="Tlx-hk-vKf" firstAttribute="top" secondItem="TaF-QP-1GZ" secondAttribute="bottom" constant="8" id="CiP-x5-Atd"/>
                             <constraint firstItem="rgX-H0-9kp" firstAttribute="centerX" secondItem="AOe-0K-fuV" secondAttribute="centerX" id="Dio-GA-aPj"/>
                             <constraint firstItem="VqV-17-CRZ" firstAttribute="centerX" secondItem="AOe-0K-fuV" secondAttribute="centerX" id="JoK-rO-GzA"/>
                             <constraint firstAttribute="trailing" secondItem="peU-Ge-Vix" secondAttribute="trailing" constant="10" id="KH3-XD-2wr"/>
                             <constraint firstItem="Tlx-hk-vKf" firstAttribute="top" secondItem="peU-Ge-Vix" secondAttribute="bottom" constant="10" id="Lxo-Me-rO8"/>
                             <constraint firstItem="Tlx-hk-vKf" firstAttribute="top" secondItem="Dap-36-L5E" secondAttribute="bottom" constant="73" id="O2w-QV-vbO"/>
                             <constraint firstItem="VqV-17-CRZ" firstAttribute="top" secondItem="iyC-jz-Yb2" secondAttribute="bottom" constant="20" id="PVa-Oe-kN4"/>
+                            <constraint firstItem="TaF-QP-1GZ" firstAttribute="centerX" secondItem="AOe-0K-fuV" secondAttribute="centerX" id="Pzs-WX-NcP"/>
                             <constraint firstItem="Nlm-qO-vM4" firstAttribute="trailing" secondItem="rgX-H0-9kp" secondAttribute="trailing" id="Sfn-TR-KNA"/>
                             <constraint firstItem="Nlm-qO-vM4" firstAttribute="height" secondItem="rgX-H0-9kp" secondAttribute="height" id="TUB-aW-fEG"/>
                             <constraint firstItem="9nO-7j-mLX" firstAttribute="centerX" secondItem="AOe-0K-fuV" secondAttribute="centerX" id="X7S-st-kLp"/>
