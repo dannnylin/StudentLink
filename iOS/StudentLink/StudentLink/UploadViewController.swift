@@ -16,6 +16,11 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addPictureBottomButton: UIButton!
     
+    @IBOutlet weak var classTextField: UITextField!
+    @IBOutlet weak var professorTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    
     var doneBarButtonItem: UIBarButtonItem!
     
     
@@ -64,7 +69,13 @@ class UploadViewController: UIViewController {
     }
     
     func done() {
-        // upload photos to firebase
+        if let className = classTextField.text, let professorName = professorTextField.text, let noteDate = dateTextField.text {
+            
+            for image in imageArray {
+                DataStorage.sharedInstance.addPictureToClass(className, image: image)
+            }
+            reset()
+        }
     }
     
     func swipingRight() {
@@ -167,6 +178,16 @@ class UploadViewController: UIViewController {
         return controller
     }
     
+    
+    func reset() {
+        imageArray.removeAll()
+        classTextField.text = ""
+        professorTextField.text = ""
+        dateTextField.text = ""
+        pageControl.numberOfPages = 0
+        pageControl.currentPage = 0
+        notesImageView.image = nil
+    }
 }
 
 
@@ -189,5 +210,12 @@ extension UploadViewController: UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
+}
+
+extension UploadViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
 }
 

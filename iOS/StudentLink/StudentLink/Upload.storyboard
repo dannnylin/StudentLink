@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -55,11 +55,17 @@
                                 <rect key="frame" x="182" y="95" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ifg-tr-otW" id="BaH-fR-96X"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="09/24/2016" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nO-7j-mLX">
                                 <rect key="frame" x="182" y="140" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ifg-tr-otW" id="YZx-tq-hTO"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-jz-Yb2">
                                 <rect key="frame" x="175" y="200" width="250" height="250"/>
@@ -76,6 +82,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ifg-tr-otW" id="Yqg-6q-Uax"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t82-uO-gDl">
                                 <rect key="frame" x="175" y="170" width="250" height="250"/>
@@ -135,9 +144,12 @@
                     <connections>
                         <outlet property="addPictureBottomButton" destination="Dap-36-L5E" id="uiS-Zi-SXW"/>
                         <outlet property="addPictureImageButton" destination="t82-uO-gDl" id="Zuy-1Q-QdM"/>
+                        <outlet property="classTextField" destination="rgX-H0-9kp" id="qU9-52-r2R"/>
+                        <outlet property="dateTextField" destination="9nO-7j-mLX" id="8f0-zN-6d8"/>
                         <outlet property="deleteButton" destination="TaF-QP-1GZ" id="9V4-f8-Cc5"/>
                         <outlet property="notesImageView" destination="iyC-jz-Yb2" id="n5G-mp-Bz3"/>
                         <outlet property="pageControl" destination="VqV-17-CRZ" id="6jj-yI-baW"/>
+                        <outlet property="professorTextField" destination="Nlm-qO-vM4" id="7Ve-iS-zfi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdx-Yz-Hxm" userLabel="First Responder" sceneMemberID="firstResponder"/>

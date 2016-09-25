@@ -31,6 +31,7 @@
 		7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD081D97453200809FB5 /* scheduleViewController.swift */; };
 		7E68FD0B1D97455600809FB5 /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */; };
 		7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */; };
+		7E6BBEFE1D97A85F00F3D065 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
 		7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2E8431D97274200248BD0 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		7E68FD081D97453200809FB5 /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scheduleViewController.swift; path = Controllers/scheduleViewController.swift; sourceTree = "<group>"; };
 		7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassModel.swift; path = Models/ClassModel.swift; sourceTree = "<group>"; };
+		7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		7EC2E8361D97274200248BD0 /* StudentLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC2E8391D97274200248BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC2E8411D97274200248BD0 /* StudentLink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentLink.xcdatamodel; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				30AA4CD61D9763B10007CD81 /* DataService.swift */,
+				7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
 				30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */,
 				30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */,
+				7E6BBEFE1D97A85F00F3D065 /* DataStorage.swift in Sources */,
 				30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */,
 				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
 				30AA4CDD1D97794E0007CD81 /* HomeViewController.swift in Sources */,
