@@ -37,7 +37,7 @@ class MainTabBarController: UITabBarController {
         uploadViewController.view.backgroundColor = UIColor.whiteColor()
         uploadViewController.navigationItem.title = "UPLOAD"
         
-        profileViewController = UIViewController()
+        profileViewController = ProfileViewController.create()
         profileViewController.view.backgroundColor = UIColor.whiteColor()
         profileViewController.navigationItem.title = "PROFILE"
     }

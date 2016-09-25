@@ -70,11 +70,17 @@ class UploadViewController: UIViewController {
     
     func done() {
         if let className = classTextField.text, let professorName = professorTextField.text, let noteDate = dateTextField.text {
-            
-            for image in imageArray {
-                DataStorage.sharedInstance.addPictureToClass(className, image: image)
+            if className != "" && professorName != "" && noteDate != "" {
+                for image in imageArray {
+                    DataStorage.sharedInstance.addPictureToClass(className, image: image)
+                }
+                reset()
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Please make sure all fields are filled out.", preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alert.addAction(okAction)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
-            reset()
         }
     }
     
@@ -189,8 +195,6 @@ class UploadViewController: UIViewController {
         notesImageView.image = nil
     }
 }
-
-
 
 extension UploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

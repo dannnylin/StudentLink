@@ -16,8 +16,14 @@ class DataService {
     
     private var _USERS_REF = FIRDatabase.database().referenceFromURL("\(FIREBASE_BASE_URL)/users")
     
+    private var _CLASSES_REF = FIRDatabase.database().referenceFromURL("\(FIREBASE_BASE_URL)/classes")
+    
     var USERS_REF: FIRDatabaseReference {
         return _USERS_REF
+    }
+    
+    var CLASSES_REF: FIRDatabaseReference {
+        return _CLASSES_REF
     }
     
     func createFirebaseUser(uid: String, provider: String) {
@@ -25,10 +31,14 @@ class DataService {
         USERS_REF.child(uid).setValue(userProvider)
     }
     
-    func addClassToUser(className:String){
+    func addClassToUser(className: String) {
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             USERS_REF.child(uid).child("classes").updateChildValues(["\(className)": true])
         }
+    }
+    
+    func addClassToClasses(className: String) {
+        CLASSES_REF.child(className).setValue(true)
     }
     
     func removeClassToUser(className:String){

@@ -19,6 +19,8 @@
 		30AA4CDD1D97794E0007CD81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */; };
 		30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CDE1D977A630007CD81 /* ClassCell.swift */; };
 		30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */; };
+		30AA4CE31D97B4470007CD81 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */; };
+		30AA4CE51D97B4510007CD81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */; };
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
@@ -62,6 +64,8 @@
 		30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30AA4CDE1D977A630007CD81 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extras.swift"; sourceTree = "<group>"; };
+		30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
+		30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */,
 				7E62F6A21D97763800BA478D /* Upload.storyboard */,
 				30AA4CDA1D9779450007CD81 /* HomeView.storyboard */,
+				30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */,
 				7E62F6A41D9777E700BA478D /* UploadViewController.swift */,
 				30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */,
+				30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */,
 				7E68FD051D97409A00809FB5 /* LoginView.storyboard in Resources */,
 				7E62F6A11D9768F300BA478D /* GoogleService-Info.plist in Resources */,
+				30AA4CE31D97B4470007CD81 /* ProfileView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +485,7 @@
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */,
 				30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */,
+				30AA4CE51D97B4510007CD81 /* ProfileViewController.swift in Sources */,
 				30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
 				30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */,

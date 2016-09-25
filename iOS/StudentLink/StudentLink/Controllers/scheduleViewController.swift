@@ -62,6 +62,7 @@ class scheduleViewController: UIViewController {
                 var classToAdd = Class(name: className)
                 dataSource.append(classToAdd)
                 DataService.sharedInstance.addClassToUser(className)
+                DataService.sharedInstance.addClassToClasses(className)
             }
         }
     }

@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="studentlink-logo" translatesAutoresizingMaskIntoConstraints="NO" id="CRs-32-xvG">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eIq-bM-BNP"/>
+                                    <constraint firstAttribute="height" constant="128" id="kd3-WK-5QR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CRs-32-xvG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="76l-nl-Gwj"/>
+                            <constraint firstItem="CRs-32-xvG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XO1-aw-ViY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +37,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="studentlink-logo" width="597" height="560"/>
+    </resources>
 </document>

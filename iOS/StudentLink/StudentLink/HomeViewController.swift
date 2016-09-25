@@ -21,9 +21,19 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let activityIndicator = UIActivityIndicatorView()
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.view.center
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = .Gray
+        
+        activityIndicator.startAnimating()
+        
         DataService.retrieveClasses { (classes) in
             if let classes = classes {
                 self.dataSource = classes
+                activityIndicator.stopAnimating()
             }
         }
         
@@ -33,6 +43,7 @@ class HomeViewController: UIViewController {
     class func create() -> HomeViewController {
         let storyboard = UIStoryboard(name: "HomeView", bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+        
         return controller
     }
 }

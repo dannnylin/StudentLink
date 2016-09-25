@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="RyN-fG-UJI">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="aHt-lH-oJa" customClass="ProfileViewController" customModule="StudentLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXm-rI-kA8"/>
+                        <viewControllerLayoutGuide type="bottom" id="fa3-dK-h2C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8HS-Lg-W6V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPC-KQ-gT6">
+                                <rect key="frame" x="359" y="186" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="aHt-lH-oJa" eventType="touchUpInside" id="yPw-VF-CN6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lPC-KQ-gT6" firstAttribute="centerX" secondItem="8HS-Lg-W6V" secondAttribute="centerX" id="lFJ-lq-Hwy"/>
+                            <constraint firstItem="lPC-KQ-gT6" firstAttribute="centerY" secondItem="8HS-Lg-W6V" secondAttribute="centerY" id="rFP-WX-JaF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTS-v4-pQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="4"/>
+        </scene>
+    </scenes>
+</document>
