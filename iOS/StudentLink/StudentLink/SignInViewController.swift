@@ -45,6 +45,10 @@ class SignInViewController: UIViewController {
                 self.navigationItem.title = "Sign Up"
             }
         }
+        
+        facebookButton.backgroundColor = UIColor.facebook()
+        actionButton.layer.cornerRadius = 5.0
+        facebookButton.layer.cornerRadius = 5.0
     }
     
     func checkFieldsAndPerformAction() {

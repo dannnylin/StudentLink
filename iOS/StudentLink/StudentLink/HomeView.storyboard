@@ -40,7 +40,7 @@
                                                 <constraint firstItem="VSN-8M-pVD" firstAttribute="centerX" secondItem="jsd-om-BoN" secondAttribute="centerX" id="hnB-ZY-G3J"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.59152656390000002" blue="0.85406150280000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="classNameLabel" destination="VSN-8M-pVD" id="KHv-wz-is0"/>
                                         </connections>

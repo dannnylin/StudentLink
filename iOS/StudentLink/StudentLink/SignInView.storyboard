@@ -18,33 +18,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afp-17-jZY">
-                                <rect key="frame" x="194.5" y="100" width="211" height="30"/>
+                                <rect key="frame" x="194.5" y="100" width="211" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cgG-tF-XFM"/>
                                     <constraint firstAttribute="width" constant="211" id="q40-tI-1BH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bV-HT-vAb">
-                                <rect key="frame" x="194.5" y="146" width="211" height="30"/>
+                                <rect key="frame" x="194.5" y="160" width="211" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zRf-gD-81Q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMs-nW-PfI">
-                                <rect key="frame" x="194.5" y="256" width="211" height="30"/>
-                                <state key="normal" title="Login With Facebook"/>
-                                <connections>
-                                    <action selector="facebookButtonPressed:" destination="BhK-gQ-gKF" eventType="touchUpInside" id="dSF-Hh-G2h"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ey-sw-tLV">
-                                <rect key="frame" x="194" y="205" width="211" height="30"/>
+                                <rect key="frame" x="194" y="233" width="211" height="44"/>
+                                <color key="backgroundColor" red="0.20314503210000001" green="0.20314503210000001" blue="0.20314503210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wL6-UX-SKw"/>
+                                    <constraint firstAttribute="height" constant="44" id="wL6-UX-SKw"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="actionButtonPressed:" destination="BhK-gQ-gKF" eventType="touchUpInside" id="nHb-3E-DTN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMs-nW-PfI">
+                                <rect key="frame" x="195" y="298" width="211" height="44"/>
+                                <color key="backgroundColor" red="0.0047087279819999998" green="0.31309869239999999" blue="0.70484775639999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sOU-LG-SuG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Login With Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sOU-LG-SuG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="BhK-gQ-gKF" eventType="touchUpInside" id="dSF-Hh-G2h"/>
                                 </connections>
                             </button>
                         </subviews>
