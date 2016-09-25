@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="KaT-Jk-Rt4">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="BhK-gQ-gKF" customClass="SignInViewController" customModule="StudentLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ubp-hT-8PR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ja8-Xl-gmz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cM0-Ms-VMc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afp-17-jZY">
+                                <rect key="frame" x="194.5" y="100" width="211" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="q40-tI-1BH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bV-HT-vAb">
+                                <rect key="frame" x="194.5" y="146" width="211" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMs-nW-PfI">
+                                <rect key="frame" x="194.5" y="256" width="211" height="30"/>
+                                <state key="normal" title="Login With Facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="BhK-gQ-gKF" eventType="touchUpInside" id="dSF-Hh-G2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ey-sw-tLV">
+                                <rect key="frame" x="194" y="205" width="211" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wL6-UX-SKw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="BhK-gQ-gKF" eventType="touchUpInside" id="nHb-3E-DTN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8bV-HT-vAb" firstAttribute="width" secondItem="afp-17-jZY" secondAttribute="width" id="2BE-b8-2X2"/>
+                            <constraint firstItem="7Ey-sw-tLV" firstAttribute="top" secondItem="8bV-HT-vAb" secondAttribute="bottom" constant="29" id="6SM-gX-s1T"/>
+                            <constraint firstItem="VMs-nW-PfI" firstAttribute="width" secondItem="7Ey-sw-tLV" secondAttribute="width" id="9sv-W9-8Ok"/>
+                            <constraint firstItem="afp-17-jZY" firstAttribute="centerX" secondItem="cM0-Ms-VMc" secondAttribute="centerX" id="An2-Ad-bfk"/>
+                            <constraint firstItem="7Ey-sw-tLV" firstAttribute="width" secondItem="8bV-HT-vAb" secondAttribute="width" id="Gbf-hc-D67"/>
+                            <constraint firstItem="8bV-HT-vAb" firstAttribute="centerX" secondItem="cM0-Ms-VMc" secondAttribute="centerX" id="H69-B4-Evy"/>
+                            <constraint firstItem="8bV-HT-vAb" firstAttribute="top" secondItem="afp-17-jZY" secondAttribute="bottom" constant="16" id="IhN-ww-68e"/>
+                            <constraint firstItem="VMs-nW-PfI" firstAttribute="centerX" secondItem="cM0-Ms-VMc" secondAttribute="centerX" id="Oxs-rM-x4v"/>
+                            <constraint firstItem="afp-17-jZY" firstAttribute="top" secondItem="Ubp-hT-8PR" secondAttribute="bottom" constant="80" id="fCQ-Kk-Q0J"/>
+                            <constraint firstItem="VMs-nW-PfI" firstAttribute="height" secondItem="7Ey-sw-tLV" secondAttribute="height" id="kgb-ID-IMD"/>
+                            <constraint firstItem="VMs-nW-PfI" firstAttribute="top" secondItem="7Ey-sw-tLV" secondAttribute="bottom" constant="21" id="pNN-mh-5mt"/>
+                            <constraint firstItem="7Ey-sw-tLV" firstAttribute="centerX" secondItem="cM0-Ms-VMc" secondAttribute="centerX" id="qUW-aC-9Hu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="7Ey-sw-tLV" id="q4O-Kk-paf"/>
+                        <outlet property="emailTextField" destination="afp-17-jZY" id="EcX-IG-PHa"/>
+                        <outlet property="facebookButton" destination="VMs-nW-PfI" id="QqC-f6-nR5"/>
+                        <outlet property="passwordTextField" destination="8bV-HT-vAb" id="7OH-5N-q00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEQ-kG-PBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="244"/>
+        </scene>
+    </scenes>
+</document>

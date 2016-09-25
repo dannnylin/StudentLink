@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,46 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI3-Ns-LGV">
-                                <rect key="frame" x="289" y="386" width="81" height="30"/>
-                                <state key="normal" title="Log in/ Sign up"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Student Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-LL-BE5">
-                                <rect key="frame" x="253" y="28" width="97" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-LL-BE5">
+                                <rect key="frame" x="251.5" y="28" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-zT-erx">
-                                <rect key="frame" x="219" y="95" width="240" height="128"/>
-                                <color key="backgroundColor" patternImage="336C8528-AEA4-4AFE-959C-6A25FD162E94" colorSpace="pattern"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-zT-erx">
+                                <rect key="frame" x="180" y="95" width="240" height="128"/>
+                                <color key="backgroundColor" patternImage="D0B5EEBD-3A28-4ED0-90EB-DE87BC104AD5" colorSpace="pattern"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6BF-uM-1v8"/>
                                     <constraint firstAttribute="height" constant="128" id="S6A-l5-DTN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C04-Yt-LVM">
-                                <rect key="frame" x="306" y="348" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-zu-6EJ">
+                                <rect key="frame" x="279" y="323" width="42" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L1z-Oq-VhW"/>
-                                    <constraint firstAttribute="width" constant="46" id="tZT-Eb-iFP"/>
+                                    <constraint firstAttribute="height" constant="30" id="BhD-NF-DvG"/>
+                                    <constraint firstAttribute="width" constant="42" id="feU-jm-fJg"/>
                                 </constraints>
-                                <state key="normal" title="Facebook login"/>
+                                <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="loginPressed:" destination="ZEg-BD-93w" eventType="touchUpInside" id="Jlc-Yf-b5K"/>
+                                    <action selector="loginPressed:" destination="ZEg-BD-93w" eventType="touchUpInside" id="N6s-IB-5sg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOt-uq-1ai">
+                                <rect key="frame" x="272.5" y="373" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="XKK-bn-TG5"/>
+                                    <constraint firstAttribute="height" constant="30" id="yQC-pj-mGV"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signupPressed:" destination="ZEg-BD-93w" eventType="touchUpInside" id="Rft-Ai-e9f"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4T4-zu-6EJ" firstAttribute="centerX" secondItem="mWG-Cw-Ata" secondAttribute="centerX" id="3bR-tW-532"/>
+                            <constraint firstItem="UUV-zT-erx" firstAttribute="centerX" secondItem="mWG-Cw-Ata" secondAttribute="centerX" id="FeK-9g-xCn"/>
                             <constraint firstItem="UUV-zT-erx" firstAttribute="top" secondItem="eBk-LL-BE5" secondAttribute="bottom" constant="46" id="Gx1-GE-UmE"/>
-                            <constraint firstItem="LI3-Ns-LGV" firstAttribute="top" secondItem="C04-Yt-LVM" secondAttribute="bottom" constant="8" id="k8a-PN-KZd"/>
+                            <constraint firstItem="eBk-LL-BE5" firstAttribute="top" secondItem="hlw-4H-gtl" secondAttribute="bottom" constant="8" id="Ti4-7k-iG2"/>
+                            <constraint firstItem="4T4-zu-6EJ" firstAttribute="top" secondItem="UUV-zT-erx" secondAttribute="bottom" constant="100" id="cn9-4i-FEk"/>
+                            <constraint firstItem="eBk-LL-BE5" firstAttribute="centerX" secondItem="mWG-Cw-Ata" secondAttribute="centerX" id="eC7-Ii-7hc"/>
+                            <constraint firstItem="nOt-uq-1ai" firstAttribute="centerX" secondItem="mWG-Cw-Ata" secondAttribute="centerX" id="pI5-nn-aXq"/>
+                            <constraint firstItem="nOt-uq-1ai" firstAttribute="top" secondItem="4T4-zu-6EJ" secondAttribute="bottom" constant="20" id="zOr-Uc-bEX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="LogoView" destination="UUV-zT-erx" id="hvJ-hQ-Whv"/>
-                        <outlet property="otherLoginButton" destination="LI3-Ns-LGV" id="JsK-j3-eEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYW-PS-2A2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,7 +77,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="336C8528-AEA4-4AFE-959C-6A25FD162E94" width="512" height="512">
+        <image name="D0B5EEBD-3A28-4ED0-90EB-DE87BC104AD5" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -17552,7 +17564,7 @@ AQAAAQYAAwAAAAEAAgAAAREABAAAAAgAEADeARIAAwAAAAEAAQAAARUAAwAAAAEABAAAARYAAwAAAAEA
 QAAAARcABAAAAAgAEAC+ARwAAwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAQAEAD+h3MABwAADEgA
 EAEGAAAAAAAIAAgACAAIAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAAAIAAIACAAEAAgA
 BgAIAAgACAAKAAgADAAIAA4ACAABAAEAAQABAAAMSExpbm8CEAAAbW50clJHQiBYWVogB84AAgAJAAYA
-MQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAAAAEAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAA
+MQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARY3BydAAAAVAAAAAzZGVzYwAAAYQA
 AABsd3RwdAAAAfAAAAAUYmtwdAAAAgQAAAAUclhZWgAAAhgAAAAUZ1hZWgAAAiwAAAAUYlhZWgAAAkAA
 AAAUZG1uZAAAAlQAAABwZG1kZAAAAsQAAACIdnVlZAAAA0wAAACGdmlldwAAA9QAAAAkbHVtaQAAA/gA

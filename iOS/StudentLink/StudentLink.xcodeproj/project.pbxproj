@@ -10,6 +10,10 @@
 		2C64967B6E7F64E45B12D38D /* Pods_StudentLinkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AF3B38A3C2DA40E2F5EB6F /* Pods_StudentLinkUITests.framework */; };
 		30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */; };
 		30AA4CCD1D973B9B0007CD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CCC1D973B9B0007CD81 /* Main.storyboard */; };
+		30AA4CCF1D9757C50007CD81 /* SignInView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CCE1D9757C50007CD81 /* SignInView.storyboard */; };
+		30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */; };
+		30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */; };
+		30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */; };
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
 		30AA4CCC1D973B9B0007CD81 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = View/Main.storyboard; sourceTree = "<group>"; };
+		30AA4CCE1D9757C50007CD81 /* SignInView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInView.storyboard; sourceTree = "<group>"; };
+		30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLinkUserDefaults.swift; sourceTree = "<group>"; };
+		30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +142,10 @@
 		7EC2E8381D97274200248BD0 /* StudentLink */ = {
 			isa = PBXGroup;
 			children = (
+				7EC2E85D1D9727D400248BD0 /* Helpers */,
 				7EC2E8601D9727F400248BD0 /* Controllers */,
 				7EC2E85F1D9727EE00248BD0 /* View */,
 				7EC2E85E1D9727DF00248BD0 /* Models */,
-				7EC2E85D1D9727D400248BD0 /* Helpers */,
 				7EC2E85C1D9727C200248BD0 /* Supporting Files */,
 			);
 			path = StudentLink;
@@ -170,6 +178,7 @@
 			children = (
 				7EC2E8621D9727FD00248BD0 /* Networking */,
 				7EC2E8611D9727F900248BD0 /* Extensions */,
+				30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 			children = (
 				30AA4CCC1D973B9B0007CD81 /* Main.storyboard */,
 				7E68FD041D97409A00809FB5 /* LoginView.storyboard */,
+				30AA4CCE1D9757C50007CD81 /* SignInView.storyboard */,
 				7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */,
 			);
 			name = View;
@@ -199,6 +209,7 @@
 				30AA4CCA1D973A4D0007CD81 /* MainTabBarController.swift */,
 				7E68FD061D97417900809FB5 /* LoginViewController.swift */,
 				7E68FD081D97453200809FB5 /* scheduleViewController.swift */,
+				30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 		7EC2E8611D9727F900248BD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -316,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC2E8471D97274200248BD0 /* LaunchScreen.storyboard in Resources */,
+				30AA4CCF1D9757C50007CD81 /* SignInView.storyboard in Resources */,
 				7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */,
 				7E68FD0B1D97455600809FB5 /* ScheduleStoryboard.storyboard in Resources */,
 				7EB093301D97387200FD6217 /* GoogleService-Info.plist in Resources */,
@@ -435,7 +448,10 @@
 				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */,
+				30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
+				30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */,
+				30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */,
 				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
 				30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */,
 			);
