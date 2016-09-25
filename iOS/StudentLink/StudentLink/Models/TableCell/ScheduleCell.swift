@@ -12,7 +12,8 @@ class ScheduleCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        classTextField.becomeFirstResponder()
     }
 
     @IBOutlet weak var classTextField: UITextField!

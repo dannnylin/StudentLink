@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1009013547142-qa7l4tb0m754i0ei1s3cbe11h7oc2bav.apps.googleusercontent.com</string>
+	<string>257268747434-16feg7nqi8nlc5bgk36bankus5u90qje.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1009013547142-qa7l4tb0m754i0ei1s3cbe11h7oc2bav</string>
+	<string>com.googleusercontent.apps.257268747434-16feg7nqi8nlc5bgk36bankus5u90qje</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBbieMsxl8OjkGMLQDoM4VnDs8f5Zen054</string>
+	<string>AIzaSyD_aQvqAgrvRMFY_yitJJA6WvDEdd99eNk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1009013547142</string>
+	<string>257268747434</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.StudentLink.StudentLink</string>
 	<key>PROJECT_ID</key>
-	<string>studentlink-938a2</string>
+	<string>studentlink-11d60</string>
 	<key>STORAGE_BUCKET</key>
-	<string>studentlink-938a2.appspot.com</string>
+	<string>studentlink-11d60.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1009013547142:ios:1d1c22f22b7cd2cf</string>
+	<string>1:257268747434:ios:1d1c22f22b7cd2cf</string>
 	<key>DATABASE_URL</key>
-	<string>https://studentlink-938a2.firebaseio.com</string>
+	<string>https://studentlink-11d60.firebaseio.com</string>
 </dict>
 </plist>
