@@ -11,9 +11,20 @@ import FBSDKLoginKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupStyling()
+    }
+    
+    func setupStyling() {
+        loginButton.layer.cornerRadius = 5.0
+        signupButton.layer.cornerRadius = 5.0
     }
     
     @IBAction func loginPressed(sender: UIButton) {
@@ -34,7 +45,5 @@ class LoginViewController: UIViewController {
 
         return controller
     }
-    @IBOutlet weak var otherLoginButton: UIButton!
-    @IBOutlet weak var LogoView: UIView!
 }
 
