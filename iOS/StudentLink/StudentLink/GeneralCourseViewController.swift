@@ -110,12 +110,22 @@ extension GeneralCourseViewController: UITableViewDelegate, UITableViewDataSourc
             DataService.retrieveDate(courseName, professorName: professor, completion: { (dates) in
                 if let dates = dates {
                     generalCourseViewController.dateDataSource = dates
+                    generalCourseViewController.professorName = professor
                     generalCourseViewController.navigationItem.title = professor.uppercaseString
                 }
                 self.navigationController?.pushViewController(generalCourseViewController, animated: true)
             })
         case .Date:
-            return
+            let date = dateDataSource[indexPath.row]
+        
+            if let professorName = self.professorName {
+                var imageArray = [UIImage]()
+                DataService.retrieveData(courseName, professorName: professorName, date: date, completion: { (images) in
+                    let notesCollectionViewController = NotesCollectionViewController.create()
+                    notesCollectionViewController.imageNames = images!
+                    self.navigationController?.pushViewController(notesCollectionViewController, animated: true)
+                })
+            }
         }
     }
 }

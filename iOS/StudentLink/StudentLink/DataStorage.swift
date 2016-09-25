@@ -21,9 +21,9 @@ class DataStorage {
         return _USERS_REF
     }
     
-    func addPictureToClass(className: String, image: UIImage, imageName: String){
-        let profilePicRef = USERS_REF.child(className).child("\(imageName).jpg")
-        USERS_REF.child(className)
+    func addPictureToClass(image: UIImage, imageName: String){
+        let profilePicRef = USERS_REF.child("\(imageName).jpg")
+        //USERS_REF.child(className)
         if let uploadData = UIImageJPEGRepresentation(image, 0){
             profilePicRef.putData(uploadData, metadata: nil, completion: { (meta, error) in
                 if error != nil {
@@ -33,6 +33,17 @@ class DataStorage {
                     print("imageAdded")
                 }
             })
+        }
+    }
+    
+    func extractImages (imageName:String, completion: UIImage? -> Void){
+        let picRef = USERS_REF.child("\(imageName).jpg")
+        picRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in
+            if (error != nil) {
+                print (error)
+            } else {
+                completion(UIImage(data: data!))
+            }
         }
     }
 }

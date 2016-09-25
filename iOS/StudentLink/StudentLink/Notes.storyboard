@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Notes Collection View Controller-->
+        <scene sceneID="ADs-sy-u5H">
+            <objects>
+                <viewController storyboardIdentifier="NotesCollectionViewController" id="Zmp-5f-FR5" customClass="NotesCollectionViewController" customModule="StudentLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lzd-9C-2hR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGl-i8-z4d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxS-ea-D83">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9OZ-48-Vhl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="H5d-O8-3bu">
+                                    <size key="itemSize" width="209" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noteCell" id="S0c-wR-PYC" customClass="NoteCollectionViewCell" customModule="StudentLink" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2en-mT-yLv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="2en-mT-yLv" firstAttribute="top" secondItem="S0c-wR-PYC" secondAttribute="top" id="V0N-Dr-CBi"/>
+                                            <constraint firstAttribute="trailing" secondItem="2en-mT-yLv" secondAttribute="trailing" id="aI8-IV-cq7"/>
+                                            <constraint firstItem="2en-mT-yLv" firstAttribute="leading" secondItem="S0c-wR-PYC" secondAttribute="leading" id="oOB-tl-cVW"/>
+                                            <constraint firstAttribute="bottom" secondItem="2en-mT-yLv" secondAttribute="bottom" id="qdV-Ch-rXz"/>
+                                        </constraints>
+                                        <size key="customSize" width="125" height="125"/>
+                                        <connections>
+                                            <outlet property="noteImageView" destination="2en-mT-yLv" id="wNU-m7-iFa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zmp-5f-FR5" id="1MO-bh-WZD"/>
+                                    <outlet property="delegate" destination="Zmp-5f-FR5" id="bfw-HU-aQd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9OZ-48-Vhl" firstAttribute="top" secondItem="fxS-ea-D83" secondAttribute="top" id="8Fd-lY-EtZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9OZ-48-Vhl" secondAttribute="trailing" id="XiB-BV-NJ7"/>
+                            <constraint firstItem="fGl-i8-z4d" firstAttribute="top" secondItem="9OZ-48-Vhl" secondAttribute="bottom" id="nRl-8h-z2T"/>
+                            <constraint firstItem="9OZ-48-Vhl" firstAttribute="leading" secondItem="fxS-ea-D83" secondAttribute="leading" id="xWR-LR-R5y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="9OZ-48-Vhl" id="4bT-Xq-Z7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yg-O8-pfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="273"/>
+        </scene>
+    </scenes>
+</document>
