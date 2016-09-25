@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uwp-Ug-B3q">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassCell" rowHeight="100" id="yon-UY-BqS" customClass="ClassCell" customModule="StudentLink" customModuleProvider="target">
@@ -51,16 +51,66 @@
                                     <outlet property="delegate" destination="nZa-zr-xl7" id="x7B-id-RI4"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zV4-Lc-7jw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AU3-yh-ckr">
+                                        <rect key="frame" x="8" y="0.0" width="542" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-Ex-2yo">
+                                        <rect key="frame" x="560" y="7" width="32" height="30"/>
+                                        <state key="normal" title="ADD"/>
+                                        <connections>
+                                            <action selector="addClassPressed:" destination="nZa-zr-xl7" eventType="touchUpInside" id="YEd-vT-Lns"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AU3-yh-ckr" firstAttribute="centerY" secondItem="zV4-Lc-7jw" secondAttribute="centerY" id="0Vb-B9-ZDo"/>
+                                    <constraint firstItem="AU3-yh-ckr" firstAttribute="top" secondItem="zV4-Lc-7jw" secondAttribute="top" id="6L9-vB-zhZ"/>
+                                    <constraint firstItem="AU3-yh-ckr" firstAttribute="leading" secondItem="zV4-Lc-7jw" secondAttribute="leading" constant="8" id="9tV-Oi-4bq"/>
+                                    <constraint firstAttribute="trailing" secondItem="AU3-yh-ckr" secondAttribute="trailing" constant="50" id="AZc-Vt-uht"/>
+                                    <constraint firstAttribute="height" id="Gbt-9C-YWV"/>
+                                    <constraint firstAttribute="bottom" secondItem="zuf-Ex-2yo" secondAttribute="bottom" id="KrC-8N-Rgi"/>
+                                    <constraint firstItem="zuf-Ex-2yo" firstAttribute="centerY" secondItem="zV4-Lc-7jw" secondAttribute="centerY" id="MrM-oU-XZO"/>
+                                    <constraint firstItem="zuf-Ex-2yo" firstAttribute="leading" secondItem="AU3-yh-ckr" secondAttribute="trailing" constant="10" id="YCZ-H1-8jI"/>
+                                    <constraint firstAttribute="bottom" secondItem="AU3-yh-ckr" secondAttribute="bottom" id="Ybm-ia-wy5"/>
+                                    <constraint firstAttribute="trailing" secondItem="zuf-Ex-2yo" secondAttribute="trailing" constant="8" id="hrk-F8-PWW"/>
+                                    <constraint firstItem="zuf-Ex-2yo" firstAttribute="top" secondItem="zV4-Lc-7jw" secondAttribute="top" id="kLM-Jl-Chx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Vb-B9-ZDo"/>
+                                        <exclude reference="AZc-Vt-uht"/>
+                                        <exclude reference="MrM-oU-XZO"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7gT-3Y-9bf" firstAttribute="top" secondItem="uwp-Ug-B3q" secondAttribute="bottom" id="IHi-M7-WXK"/>
+                            <constraint firstItem="zV4-Lc-7jw" firstAttribute="leading" secondItem="680-mf-sMZ" secondAttribute="leading" id="Lf8-hf-XWs"/>
+                            <constraint firstItem="zV4-Lc-7jw" firstAttribute="top" secondItem="680-mf-sMZ" secondAttribute="top" id="R4L-cl-N8w"/>
                             <constraint firstItem="uwp-Ug-B3q" firstAttribute="leading" secondItem="680-mf-sMZ" secondAttribute="leading" id="giB-1x-Fr2"/>
+                            <constraint firstItem="uwp-Ug-B3q" firstAttribute="top" secondItem="zV4-Lc-7jw" secondAttribute="bottom" id="iFc-j0-wXB"/>
+                            <constraint firstAttribute="trailing" secondItem="zV4-Lc-7jw" secondAttribute="trailing" id="kZ9-w2-zgU"/>
                             <constraint firstAttribute="trailing" secondItem="uwp-Ug-B3q" secondAttribute="trailing" id="koo-J5-wlS"/>
-                            <constraint firstItem="uwp-Ug-B3q" firstAttribute="top" secondItem="kiG-Ee-nPa" secondAttribute="bottom" id="n7J-iT-ZGE"/>
+                            <constraint firstItem="uwp-Ug-B3q" firstAttribute="top" secondItem="kiG-Ee-nPa" secondAttribute="bottom" constant="40" id="n7J-iT-ZGE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="n7J-iT-ZGE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="zuf-Ex-2yo" id="tWQ-ed-VkT"/>
+                        <outlet property="addClassesViewHeightConstraint" destination="Gbt-9C-YWV" id="q5T-MG-MBm"/>
+                        <outlet property="classTextField" destination="AU3-yh-ckr" id="z1n-4M-rgs"/>
                         <outlet property="tableView" destination="uwp-Ug-B3q" id="TKb-rR-EGD"/>
                     </connections>
                 </viewController>

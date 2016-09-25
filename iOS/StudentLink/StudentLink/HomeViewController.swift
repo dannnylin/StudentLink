@@ -17,6 +17,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addClassesViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var classTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var cancelBarButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +38,71 @@ class HomeViewController: UIViewController {
         DataService.retrieveClasses { (classes) in
             if let classes = classes {
                 self.dataSource = classes
-                activityIndicator.stopAnimating()
             }
+            activityIndicator.stopAnimating()
         }
         
         tableView.allowsSelection = false
+        tableView.allowsMultipleSelectionDuringEditing = false
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .Plain, target: self, action: #selector(addClass))
+        
+        cancelBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(cancelAdd))
+        
+        self.navigationItem.leftBarButtonItem = nil
+        
+        addButton.hidden = true
+        
+        classTextField.delegate = self
+    }
+    
+    func cancelAdd() {
+        UIView.animateWithDuration(0.4) { 
+            self.addClassesViewHeightConstraint.constant = 0
+            self.addButton.hidden = true
+            self.navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
+    func addClass() {
+        UIView.animateWithDuration(0.4) { 
+            self.addClassesViewHeightConstraint.constant = 44
+            self.addButton.hidden = false
+            self.navigationItem.leftBarButtonItem = self.cancelBarButtonItem
+        }
+    }
+    
+    @IBAction func addClassPressed(sender: AnyObject) {
+        if let className = classTextField.text where className != "" {
+            for aClass in dataSource {
+                if aClass.name == className {
+                    let alert = UIAlertController(title: "Error", message: "You already have this course added.", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(OKAction)
+                    self.presentViewController(alert, animated: true, completion: { 
+                        return
+                    })
+                    return
+                }
+            }
+            DataService.sharedInstance.addClassToUser(className)
+            DataService.sharedInstance.addClassToClasses(className)
+            let tempClass = Class(name: className)
+            dataSource.append(tempClass)
+            classTextField.text = ""
+            classTextField.resignFirstResponder()
+            
+            UIView.animateWithDuration(0.4) {
+                self.addClassesViewHeightConstraint.constant = 0
+                self.addButton.hidden = true
+                self.navigationItem.leftBarButtonItem = nil
+            }
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please enter a course name.", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(OKAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     class func create() -> HomeViewController {
@@ -67,5 +132,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureForClass(theClass)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            dataSource.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        addClassPressed(textField)
+        
+        return false
     }
 }
