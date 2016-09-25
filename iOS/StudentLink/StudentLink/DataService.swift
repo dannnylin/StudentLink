@@ -24,4 +24,15 @@ class DataService {
         let userProvider = ["Provider": provider]
         USERS_REF.child(uid).setValue(userProvider)
     }
+    
+    func addClassToUser(className:String){
+        if let uid = FIRAuth.auth()?.currentUser?.uid {
+            USERS_REF.child(uid).child("classes").updateChildValues(["\(className)": true])
+        }
+    }
+    func removeClassToUser(className:String){
+        if let uid = FIRAuth.auth()?.currentUser?.uid {
+            USERS_REF.child(uid).child("classes").updateChildValues(["\(className)": false])
+        }
+    }
 }

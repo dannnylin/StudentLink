@@ -11,19 +11,29 @@ import UIKit
 class scheduleViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var doneBarButtonItem: UIBarButtonItem!
     
     
     var dataSource = [Class]() {
         didSet {
             tableView.reloadData()
+            if dataSource.isEmpty {
+                doneBarButtonItem.enabled = false
+            }
+            else {
+                doneBarButtonItem.enabled = true
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.title = "Create Schedule"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(add))
+        doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(done))
+        doneBarButtonItem.enabled = false
+        
+        self.navigationItem.leftBarButtonItem = doneBarButtonItem
         
     }
     
@@ -32,14 +42,27 @@ class scheduleViewController: UIViewController {
         addClassToFirebase()
     }
     
+    func done() {
+        let lastRowIndex = tableView.numberOfRowsInSection(0)-1
+        let pathToLastRow = NSIndexPath(forRow: lastRowIndex, inSection: 0)
+        
+        if let cell = tableView.cellForRowAtIndexPath(pathToLastRow) as? ScheduleCell {
+            cell.classTextField.resignFirstResponder()
+        }
+        
+        moveToMainScreen()
+    }
+    
     func addClassToFirebase() {
-        let lastRowIndex = tableView.numberOfRowsInSection(0)
+        let lastRowIndex = tableView.numberOfRowsInSection(0)-1
         let pathToLastRow = NSIndexPath(forRow: lastRowIndex, inSection: 0)
         
         if let cell = tableView.cellForRowAtIndexPath(pathToLastRow) as? ScheduleCell {
             if let className = cell.classTextField.text {
-                cell.classTextField.text != ""
-              //  var classToAdd =
+                var classToAdd = Class()
+                classToAdd.name = className
+                dataSource.append(classToAdd)
+                DataService.sharedInstance.addClassToUser(className)
             }
         }
     }

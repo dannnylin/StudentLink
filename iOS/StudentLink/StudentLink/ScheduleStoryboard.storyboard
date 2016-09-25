@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-vc-s8c">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="-40" width="600" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="Lzq-Fn-vDm" customClass="ScheduleCell" customModule="StudentLink" customModuleProvider="target">
@@ -53,9 +53,15 @@
                         <constraints>
                             <constraint firstItem="Oa6-Ab-EGb" firstAttribute="top" secondItem="vbj-vc-s8c" secondAttribute="bottom" id="37I-pg-fzE"/>
                             <constraint firstItem="vbj-vc-s8c" firstAttribute="top" secondItem="pM5-qO-s0U" secondAttribute="bottom" id="ZOh-ri-DtT"/>
+                            <constraint firstItem="vbj-vc-s8c" firstAttribute="top" secondItem="pM5-qO-s0U" secondAttribute="bottom" constant="-60" id="cEW-zk-w53"/>
                             <constraint firstItem="vbj-vc-s8c" firstAttribute="leading" secondItem="X1b-04-fn9" secondAttribute="leading" id="gMN-a6-bcB"/>
                             <constraint firstAttribute="trailing" secondItem="vbj-vc-s8c" secondAttribute="trailing" id="xMQ-QI-UaI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZOh-ri-DtT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="vbj-vc-s8c" id="BLC-xi-KAJ"/>
