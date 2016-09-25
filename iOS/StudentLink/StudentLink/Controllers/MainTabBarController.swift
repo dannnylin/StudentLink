@@ -33,7 +33,7 @@ class MainTabBarController: UITabBarController {
         homeViewController.view.backgroundColor = UIColor.whiteColor()
         homeViewController.navigationItem.title = "CLASSES"
         
-        uploadViewController = UIViewController()
+        uploadViewController = UploadViewController.create()
         uploadViewController.view.backgroundColor = UIColor.whiteColor()
         uploadViewController.navigationItem.title = "UPLOAD"
         
