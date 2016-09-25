@@ -41,8 +41,7 @@ class HomeViewController: UIViewController {
             }
             activityIndicator.stopAnimating()
         }
-        
-        tableView.allowsSelection = false
+    
         tableView.allowsMultipleSelectionDuringEditing = false
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .Plain, target: self, action: #selector(addClass))
@@ -89,7 +88,7 @@ class HomeViewController: UIViewController {
                 }
             }
             DataService.sharedInstance.addClassToUser(className)
-            DataService.sharedInstance.addClassToClasses(className)
+//            DataService.sharedInstance.addClassToClasses(className)
             let tempClass = Class(name: className)
             dataSource.append(tempClass)
             classTextField.text = ""
@@ -135,6 +134,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureForClass(theClass)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let theClass = dataSource[indexPath.row]
+        
+        if let className = theClass.name {
+            let generalCourseViewController = GeneralCourseViewController.create(.Professor, courseName: className)
+            
+            DataService.retrieveProfessor(className, completion: { (professors) in
+                if let professors = professors {
+                    generalCourseViewController.professorDataSource = professors
+                    self.navigationController?.pushViewController(generalCourseViewController, animated: true)
+                }
+            })
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

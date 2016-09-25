@@ -74,6 +74,7 @@ class UploadViewController: UIViewController {
                 for image in imageArray {
                     var imageName = NSUUID().UUIDString
                     DataStorage.sharedInstance.addPictureToClass(className, image: image, imageName: imageName)
+                    DataService.sharedInstance.addNotesToClass(className, professorName: professorName, noteDate: noteDate, noteName: imageName)
                 }
                 reset()
             } else {

@@ -47,8 +47,10 @@ class DataService {
         }
     }
     
-    func addNotesToClass(className: String, professorName: String, noteName:String){
-        CLASSES_REF.child(className).child(professorName).child(noteName)
+    func addNotesToClass(className: String, professorName: String, noteDate:String, noteName: String) {
+        if let uid = FIRAuth.auth()?.currentUser?.uid {
+            CLASSES_REF.child(className).child(professorName).child(noteDate).child(noteName).setValue(["Uploader": uid])
+        }
     }
     
     class func retrieveClasses(completion: [Class]? -> Void) {
@@ -70,5 +72,38 @@ class DataService {
         }
     }
     
+    class func retrieveProfessor(className: String, completion: [String]? -> Void) {
+        DataService.sharedInstance.CLASSES_REF.child(className).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if let classDict = snapshot.value as? NSDictionary, professorDict = classDict as? NSDictionary {
+                var professorNames = [String]()
+                for aProfessor in professorDict {
+                    
+                    if let professorName = aProfessor.key as? String {
+                        professorNames.append(professorName)
+                    }
+                }
+                completion(professorNames)
+            } else {
+                completion(nil)
+            }
+        })
+    }
+    class func retrieveDate(className: String, professorName:String, completion: [String]? -> Void) {
+        DataService.sharedInstance.CLASSES_REF.child(className).child(professorName).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if let classDict = snapshot.value as? NSDictionary, professorDict = classDict as? NSDictionary, dateDict = professorDict as? NSDictionary {
+                var dates = [String]()
+                for aDate in dateDict{
+                    
+                    if let date = aDate.key as? String {
+                        dates.append(date)
+                    }
+                }
+                completion(dates)
+            } else {
+                completion(nil)
+            }
+        })
+    }
+
     
 }

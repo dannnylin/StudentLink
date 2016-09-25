@@ -35,6 +35,9 @@
 		7E68FD0B1D97455600809FB5 /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */; };
 		7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */; };
 		7E6BBEFE1D97A85F00F3D065 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */; };
+		7E6BBF021D97CC1900F3D065 /* GeneralCourseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6BBF011D97CC1900F3D065 /* GeneralCourseView.storyboard */; };
+		7E6BBF041D97CC5000F3D065 /* GeneralCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBF031D97CC5000F3D065 /* GeneralCourseViewController.swift */; };
+		7E6BBF061D97CDB500F3D065 /* GeneralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBF051D97CDB500F3D065 /* GeneralCell.swift */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
 		7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2E8431D97274200248BD0 /* Assets.xcassets */; };
@@ -84,6 +87,9 @@
 		7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassModel.swift; path = Models/ClassModel.swift; sourceTree = "<group>"; };
 		7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		7E6BBF011D97CC1900F3D065 /* GeneralCourseView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GeneralCourseView.storyboard; sourceTree = "<group>"; };
+		7E6BBF031D97CC5000F3D065 /* GeneralCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCourseViewController.swift; sourceTree = "<group>"; };
+		7E6BBF051D97CDB500F3D065 /* GeneralCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneralCell.swift; path = Models/TableCell/GeneralCell.swift; sourceTree = "<group>"; };
 		7EC2E8361D97274200248BD0 /* StudentLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC2E8391D97274200248BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC2E8411D97274200248BD0 /* StudentLink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentLink.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7E62F69E1D974F6400BA478D /* ScheduleCell.swift */,
+				7E6BBF051D97CDB500F3D065 /* GeneralCell.swift */,
 				30AA4CDE1D977A630007CD81 /* ClassCell.swift */,
 			);
 			name = "Table Cells";
@@ -226,6 +233,7 @@
 				7E62F6A21D97763800BA478D /* Upload.storyboard */,
 				30AA4CDA1D9779450007CD81 /* HomeView.storyboard */,
 				30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */,
+				7E6BBF011D97CC1900F3D065 /* GeneralCourseView.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 				7E62F6A41D9777E700BA478D /* UploadViewController.swift */,
 				30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */,
 				30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */,
+				7E6BBF031D97CC5000F3D065 /* GeneralCourseViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -362,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AA4CDB1D9779450007CD81 /* HomeView.storyboard in Resources */,
+				7E6BBF021D97CC1900F3D065 /* GeneralCourseView.storyboard in Resources */,
 				7EC2E8471D97274200248BD0 /* LaunchScreen.storyboard in Resources */,
 				7E62F6A31D97763800BA478D /* Upload.storyboard in Resources */,
 				30AA4CCF1D9757C50007CD81 /* SignInView.storyboard in Resources */,
@@ -485,11 +495,13 @@
 				30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */,
 				30AA4CE71D97B5670007CD81 /* StudentLinkCache.swift in Sources */,
 				7E62F6A51D9777E700BA478D /* UploadViewController.swift in Sources */,
+				7E6BBF041D97CC5000F3D065 /* GeneralCourseViewController.swift in Sources */,
 				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
 				7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */,
 				30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */,
 				30AA4CE51D97B4510007CD81 /* ProfileViewController.swift in Sources */,
+				7E6BBF061D97CDB500F3D065 /* GeneralCell.swift in Sources */,
 				30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
 				30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */,
