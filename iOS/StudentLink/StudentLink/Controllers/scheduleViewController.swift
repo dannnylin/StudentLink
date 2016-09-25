@@ -47,6 +47,10 @@ class scheduleViewController: UIViewController {
         let pathToLastRow = NSIndexPath(forRow: lastRowIndex, inSection: 0)
         
         if let cell = tableView.cellForRowAtIndexPath(pathToLastRow) as? ScheduleCell {
+            if let className = cell.classTextField.text where className != "" {
+                DataService.sharedInstance.addClassToUser(className)
+                DataService.sharedInstance.addClassToClasses(className)
+            }
             cell.classTextField.resignFirstResponder()
         }
         

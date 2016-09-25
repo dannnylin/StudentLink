@@ -47,6 +47,10 @@ class DataService {
         }
     }
     
+    func addNotesToClass(className: String, professorName: String, noteName:String){
+        CLASSES_REF.child(className).child(professorName).child(noteName)
+    }
+    
     class func retrieveClasses(completion: [Class]? -> Void) {
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             DataService.sharedInstance.USERS_REF.child(uid).child("classes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in

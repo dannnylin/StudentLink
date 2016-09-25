@@ -61,6 +61,8 @@ class HomeViewController: UIViewController {
             self.addClassesViewHeightConstraint.constant = 0
             self.addButton.hidden = true
             self.navigationItem.leftBarButtonItem = nil
+            self.classTextField.text = ""
+            self.classTextField.resignFirstResponder()
         }
     }
     
@@ -69,6 +71,7 @@ class HomeViewController: UIViewController {
             self.addClassesViewHeightConstraint.constant = 44
             self.addButton.hidden = false
             self.navigationItem.leftBarButtonItem = self.cancelBarButtonItem
+            self.classTextField.becomeFirstResponder()
         }
     }
     

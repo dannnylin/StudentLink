@@ -49,6 +49,9 @@ class SignInViewController: UIViewController {
         facebookButton.backgroundColor = UIColor.facebook()
         actionButton.layer.cornerRadius = 5.0
         facebookButton.layer.cornerRadius = 5.0
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     func checkFieldsAndPerformAction() {
@@ -86,7 +89,7 @@ class SignInViewController: UIViewController {
         }
     }
     
-    @IBAction func actionButtonPressed(sender: UIButton) {
+    @IBAction func actionButtonPressed(sender: AnyObject) {
         if let mode = mode {
             switch mode {
             case .Login:
@@ -160,5 +163,14 @@ class SignInViewController: UIViewController {
         let controller = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
         controller.mode = mode
         return controller
+    }
+}
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        actionButtonPressed(textField)
+        
+        return false
     }
 }
