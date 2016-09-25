@@ -41,7 +41,9 @@ class LoginViewController: UIViewController {
                         }
                         
                         // move to home
-                        self.view.window?.rootViewController = MainTabBarController.create()
+//                        self.view.window?.rootViewController = MainTabBarController.create()
+                        let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController.create())
+                        self.presentViewController(scheduleNavigationController, animated: true, completion: nil)
                     }
                 }
             }

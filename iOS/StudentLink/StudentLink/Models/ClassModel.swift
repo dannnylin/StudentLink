@@ -10,7 +10,9 @@ import Foundation
 
 
 class Class {
-
+    
+    var name:String?
+    var ID:String?
     
     
 }

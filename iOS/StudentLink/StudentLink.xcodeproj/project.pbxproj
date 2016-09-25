@@ -13,6 +13,7 @@
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
+		7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62F69E1D974F6400BA478D /* ScheduleCell.swift */; };
 		7E68FD051D97409A00809FB5 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68FD041D97409A00809FB5 /* LoginView.storyboard */; };
 		7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD061D97417900809FB5 /* LoginViewController.swift */; };
 		7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68FD081D97453200809FB5 /* scheduleViewController.swift */; };
@@ -46,6 +47,7 @@
 		7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		7E0A7CE51D973EE200315584 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7E62F69E1D974F6400BA478D /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleCell.swift; path = Models/TableCell/ScheduleCell.swift; sourceTree = "<group>"; };
 		7E68FD041D97409A00809FB5 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = View/LoginView.storyboard; sourceTree = "<group>"; };
 		7E68FD061D97417900809FB5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		7E68FD081D97453200809FB5 /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scheduleViewController.swift; path = Controllers/scheduleViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 				81AF3B38A3C2DA40E2F5EB6F /* Pods_StudentLinkUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E62F69D1D974F0B00BA478D /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7E62F69E1D974F6400BA478D /* ScheduleCell.swift */,
+			);
+			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 		7EC2E82D1D97274200248BD0 = {
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7E68FD0C1D9746EC00809FB5 /* ClassModel.swift */,
+				7E62F69D1D974F0B00BA478D /* Table Cells */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -423,6 +434,7 @@
 				7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */,
 				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
+				7E62F69F1D974F6400BA478D /* ScheduleCell.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
 				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
 				30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */,
