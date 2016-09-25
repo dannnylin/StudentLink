@@ -21,6 +21,7 @@
 		30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */; };
 		30AA4CE31D97B4470007CD81 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */; };
 		30AA4CE51D97B4510007CD81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */; };
+		30AA4CE71D97B5670007CD81 /* StudentLinkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE61D97B5670007CD81 /* StudentLinkCache.swift */; };
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
@@ -66,6 +67,7 @@
 		30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extras.swift"; sourceTree = "<group>"; };
 		30AA4CE21D97B4470007CD81 /* ProfileView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 		30AA4CE41D97B4510007CD81 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		30AA4CE61D97B5670007CD81 /* StudentLinkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLinkCache.swift; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				7EC2E8621D9727FD00248BD0 /* Networking */,
 				7EC2E8611D9727F900248BD0 /* Extensions */,
 				30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */,
+				30AA4CE61D97B5670007CD81 /* StudentLinkCache.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 			files = (
 				7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */,
 				30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */,
+				30AA4CE71D97B5670007CD81 /* StudentLinkCache.swift in Sources */,
 				7E62F6A51D9777E700BA478D /* UploadViewController.swift in Sources */,
 				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
