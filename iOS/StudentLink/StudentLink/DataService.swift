@@ -30,9 +30,29 @@ class DataService {
             USERS_REF.child(uid).child("classes").updateChildValues(["\(className)": true])
         }
     }
+    
     func removeClassToUser(className:String){
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             USERS_REF.child(uid).child("classes").updateChildValues(["\(className)": false])
+        }
+    }
+    
+    class func retrieveClasses(completion: [Class]? -> Void) {
+        if let uid = FIRAuth.auth()?.currentUser?.uid {
+            DataService.sharedInstance.USERS_REF.child(uid).child("classes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                var classes = [Class]()
+                if let classDict = snapshot.value as? [String: Bool] {
+                    for aClass in classDict {
+                        if aClass.1 {
+                            let newClass = Class(name: aClass.0)
+                            classes.append(newClass)
+                        }
+                    }
+                    completion(classes)
+                } else {
+                    completion(nil)
+                }
+            })
         }
     }
 }

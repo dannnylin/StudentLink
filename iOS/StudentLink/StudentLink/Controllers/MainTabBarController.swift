@@ -25,13 +25,13 @@ class MainTabBarController: UITabBarController {
         
         
         self.viewControllers = navigationControllers
-        self.tabBar.tintColor = UIColor.blueColor()
+        self.tabBar.tintColor = UIColor.nicePurple()
     }
     
     func createViewControllers() {
-        homeViewController = UIViewController()
+        homeViewController = HomeViewController.create()
         homeViewController.view.backgroundColor = UIColor.whiteColor()
-        homeViewController.navigationItem.title = "HOME"
+        homeViewController.navigationItem.title = "CLASSES"
         
         uploadViewController = UIViewController()
         uploadViewController.view.backgroundColor = UIColor.whiteColor()

@@ -59,8 +59,7 @@ class scheduleViewController: UIViewController {
         
         if let cell = tableView.cellForRowAtIndexPath(pathToLastRow) as? ScheduleCell {
             if let className = cell.classTextField.text {
-                var classToAdd = Class()
-                classToAdd.name = className
+                var classToAdd = Class(name: className)
                 dataSource.append(classToAdd)
                 DataService.sharedInstance.addClassToUser(className)
             }

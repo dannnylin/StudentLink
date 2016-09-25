@@ -15,6 +15,10 @@
 		30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */; };
 		30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */; };
 		30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CD61D9763B10007CD81 /* DataService.swift */; };
+		30AA4CDB1D9779450007CD81 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AA4CDA1D9779450007CD81 /* HomeView.storyboard */; };
+		30AA4CDD1D97794E0007CD81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */; };
+		30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CDE1D977A630007CD81 /* ClassCell.swift */; };
+		30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */; };
 		7E0A7CE31D973ED900315584 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE11D973ED900315584 /* FBSDKCoreKit.framework */; };
 		7E0A7CE41D973ED900315584 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE21D973ED900315584 /* FBSDKLoginKit.framework */; };
 		7E0A7CE61D973EE200315584 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0A7CE51D973EE200315584 /* Bolts.framework */; };
@@ -53,6 +57,10 @@
 		30AA4CD21D975EE50007CD81 /* StudentLinkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLinkUserDefaults.swift; sourceTree = "<group>"; };
 		30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		30AA4CD61D9763B10007CD81 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		30AA4CDA1D9779450007CD81 /* HomeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		30AA4CDE1D977A630007CD81 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extras.swift"; sourceTree = "<group>"; };
 		4186B20BDD50CE93FE5E83AF /* Pods_StudentLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8FEF1FDC37992E8582AF44 /* Pods-StudentLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLink/Pods-StudentLink.release.xcconfig"; sourceTree = "<group>"; };
 		7B7D4D2DF36ACA9533B0DC90 /* Pods-StudentLinkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentLinkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentLinkUITests/Pods-StudentLinkUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				7E62F69E1D974F6400BA478D /* ScheduleCell.swift */,
+				30AA4CDE1D977A630007CD81 /* ClassCell.swift */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -206,6 +215,7 @@
 				30AA4CCE1D9757C50007CD81 /* SignInView.storyboard */,
 				7E68FD0A1D97455600809FB5 /* ScheduleStoryboard.storyboard */,
 				7E62F6A21D97763800BA478D /* Upload.storyboard */,
+				30AA4CDA1D9779450007CD81 /* HomeView.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 				7E68FD081D97453200809FB5 /* scheduleViewController.swift */,
 				30AA4CD01D9757FC0007CD81 /* SignInViewController.swift */,
 				7E62F6A41D9777E700BA478D /* UploadViewController.swift */,
+				30AA4CDC1D97794E0007CD81 /* HomeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				30AA4CD41D97605C0007CD81 /* UIViewController+Extras.swift */,
+				30AA4CE01D97817F0007CD81 /* UIColor+Extras.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30AA4CDB1D9779450007CD81 /* HomeView.storyboard in Resources */,
 				7EC2E8471D97274200248BD0 /* LaunchScreen.storyboard in Resources */,
 				7E62F6A31D97763800BA478D /* Upload.storyboard in Resources */,
 				30AA4CCF1D9757C50007CD81 /* SignInView.storyboard in Resources */,
@@ -455,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E68FD0D1D9746EC00809FB5 /* ClassModel.swift in Sources */,
+				30AA4CE11D97817F0007CD81 /* UIColor+Extras.swift in Sources */,
 				7E62F6A51D9777E700BA478D /* UploadViewController.swift in Sources */,
 				7E68FD071D97417900809FB5 /* LoginViewController.swift in Sources */,
 				7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */,
@@ -462,9 +476,11 @@
 				30AA4CD11D9757FC0007CD81 /* SignInViewController.swift in Sources */,
 				30AA4CD71D9763B10007CD81 /* DataService.swift in Sources */,
 				7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */,
+				30AA4CDF1D977A630007CD81 /* ClassCell.swift in Sources */,
 				30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */,
 				30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */,
 				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
+				30AA4CDD1D97794E0007CD81 /* HomeViewController.swift in Sources */,
 				30AA4CCB1D973A4D0007CD81 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

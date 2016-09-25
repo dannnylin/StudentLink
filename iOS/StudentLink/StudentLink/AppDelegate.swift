@@ -23,10 +23,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
         
+        UINavigationBar.appearance().barTintColor = UIColor.nicePurple()
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(17)]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        window?.rootViewController = LoginViewController.create()
         
         FIRApp.configure()
+        
+        if StudentLinkUserDefaults.getUID() != nil {
+            window?.rootViewController = MainTabBarController.create()
+        } else {
+            window?.rootViewController = LoginViewController.create()
+        }
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         return true
     }

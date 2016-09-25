@@ -60,6 +60,8 @@ class SignInViewController: UIViewController {
                     if let uid = user?.uid {
                         StudentLinkUserDefaults.setUID(uid)
                     }
+                    
+                    self.moveToMainScreen()
                 })
             case .Signup:
                 FIRAuth.auth()?.createUserWithEmail(email, password: password, completion: { (user, error) in
@@ -73,9 +75,10 @@ class SignInViewController: UIViewController {
                         DataService.sharedInstance.createFirebaseUser(uid, provider: "Email")
                     }
                     
+                    let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController.create())
+                    self.presentViewController(scheduleNavigationController, animated: true, completion: nil)
                 })
             }
-            self.moveToMainScreen()
         }
     }
     
