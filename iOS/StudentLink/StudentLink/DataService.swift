@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 let FIREBASE_BASE_URL = "https://studentlink-11d60.firebaseio.com/"
 
 class DataService {
@@ -106,20 +107,18 @@ class DataService {
     }
     class func retrieveData(className: String, professorName:String, date:String, completion: [String]? -> Void) {
         DataService.sharedInstance.CLASSES_REF.child(className).child(professorName).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let classDict = snapshot.value as? NSDictionary, professorDict = classDict as? NSDictionary {
-
-                let dateDict = classDict.allValues as? NSDictionary
-                print(dateDict)
-                let picDict = dateDict?.allValues as? NSDictionary
-                print(picDict)
-                var images = [String]()
-                for pic in picDict!{
-                    //print (pic.allValues)
+            if let classDict = snapshot.value as? NSDictionary{
+                if let picDicts = classDict.allValues as? [NSDictionary] {
+                    for aPicDict in picDicts {
+                        if let imageNames =  aPicDict.allKeys as? [String]{
+                             completion(imageNames)
+                        }
+                    }
                 }
-                completion(images)
-            } else {
+            }
+            else {
                 completion(nil)
-                }
+            }
         })
     }
     
