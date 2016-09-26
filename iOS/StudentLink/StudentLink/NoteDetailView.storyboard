@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Note Detail View Controller-->
+        <scene sceneID="5Pe-4n-gtx">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailViewController" id="RfC-iR-Y6d" customClass="NoteDetailViewController" customModule="StudentLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPg-WZ-v8E"/>
+                        <viewControllerLayoutGuide type="bottom" id="xc0-dJ-4B3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zgl-lQ-W2a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xw5-EI-lnk">
+                                <rect key="frame" x="100" y="100" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="cBW-W4-v22"/>
+                                    <constraint firstAttribute="height" constant="400" id="cmm-Wd-S7t"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmH-Cb-1dM">
+                                <rect key="frame" x="285" y="520" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="RfC-iR-Y6d" eventType="touchUpInside" id="GGf-ye-LSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xw5-EI-lnk" firstAttribute="centerY" secondItem="Zgl-lQ-W2a" secondAttribute="centerY" id="9dH-ij-A8O"/>
+                            <constraint firstItem="TmH-Cb-1dM" firstAttribute="centerX" secondItem="Zgl-lQ-W2a" secondAttribute="centerX" id="IpL-Fw-NLF"/>
+                            <constraint firstItem="Xw5-EI-lnk" firstAttribute="centerX" secondItem="Zgl-lQ-W2a" secondAttribute="centerX" id="KQ6-to-BM0"/>
+                            <constraint firstItem="TmH-Cb-1dM" firstAttribute="top" secondItem="Xw5-EI-lnk" secondAttribute="bottom" constant="20" id="e1v-lB-zrv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteImageView" destination="Xw5-EI-lnk" id="L0H-Yl-1wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuZ-6z-zUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="258"/>
+        </scene>
+    </scenes>
+</document>

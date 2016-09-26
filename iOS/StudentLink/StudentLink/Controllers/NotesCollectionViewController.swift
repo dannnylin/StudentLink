@@ -58,7 +58,14 @@ extension NotesCollectionViewController:UICollectionViewDelegate{
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //present controller
+        
+        let image = imageArray[indexPath.row]
+        
+        let noteDetailViewController = NoteDetailViewController.create()
+        noteDetailViewController.setupImage(image)
+        
+        self.presentViewController(noteDetailViewController, animated: true, completion: nil)
+        
     }
     
 }

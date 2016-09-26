@@ -8,29 +8,14 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>Pods-StudentLinkUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>59AFB61F3BB1FBC7BF42DAA7AE8BF1D5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CCC68988201289D75BFE8441AD1887F8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
