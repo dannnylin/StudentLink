@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "257268747434",
+    "firebase_url": "https://studentlink-11d60.firebaseio.com",
+    "project_id": "studentlink-11d60",
+    "storage_bucket": "studentlink-11d60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257268747434:android:5984160558351ab1",
+        "android_client_info": {
+          "package_name": "com.studentlinkapp.studentlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257268747434-6ihlc8st5o0lojf3idfple0iknl0ersr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWVfUxlv2_ojpP0RWOUzcbJLpETa0Z1vw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257268747434:android:28b2f57d491efaff",
+        "android_client_info": {
+          "package_name": "com.studentlinkapp.studentlinkapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257268747434-1mb82fk6hev3lrso0aisov2r9t7scoof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.studentlinkapp.studentlinkapp",
+            "certificate_hash": "E4857B1AB9BD6FDD972F1AAD850884B50FBC75A2"
+          }
+        },
+        {
+          "client_id": "257268747434-6ihlc8st5o0lojf3idfple0iknl0ersr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWVfUxlv2_ojpP0RWOUzcbJLpETa0Z1vw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257268747434-6ihlc8st5o0lojf3idfple0iknl0ersr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257268747434-16feg7nqi8nlc5bgk36bankus5u90qje.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.StudentLink.StudentLink"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
