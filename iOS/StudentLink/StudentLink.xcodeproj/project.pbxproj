@@ -43,6 +43,7 @@
 		7E6BBF081D97DD6500F3D065 /* NotesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBF071D97DD6500F3D065 /* NotesCollectionViewController.swift */; };
 		7E6BBF0A1D97DD7F00F3D065 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6BBF091D97DD7F00F3D065 /* Notes.storyboard */; };
 		7E6BBF0C1D97DE9700F3D065 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6BBF0B1D97DE9700F3D065 /* NoteCollectionViewCell.swift */; };
+		7E7233EE1DA2A9030001CEE7 /* FacebookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7233ED1DA2A9030001CEE7 /* FacebookInfo.swift */; };
 		7EC2E83A1D97274200248BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8391D97274200248BD0 /* AppDelegate.swift */; };
 		7EC2E8421D97274200248BD0 /* StudentLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2E8401D97274200248BD0 /* StudentLink.xcdatamodeld */; };
 		7EC2E8441D97274200248BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2E8431D97274200248BD0 /* Assets.xcassets */; };
@@ -100,6 +101,7 @@
 		7E6BBF071D97DD6500F3D065 /* NotesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesCollectionViewController.swift; path = Controllers/NotesCollectionViewController.swift; sourceTree = "<group>"; };
 		7E6BBF091D97DD7F00F3D065 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		7E6BBF0B1D97DE9700F3D065 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteCollectionViewCell.swift; path = Models/TableCell/NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E7233ED1DA2A9030001CEE7 /* FacebookInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookInfo.swift; sourceTree = "<group>"; };
 		7EC2E8361D97274200248BD0 /* StudentLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC2E8391D97274200248BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC2E8411D97274200248BD0 /* StudentLink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentLink.xcdatamodel; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				30AA4CD61D9763B10007CD81 /* DataService.swift */,
 				7E6BBEFD1D97A85F00F3D065 /* DataStorage.swift */,
+				7E7233ED1DA2A9030001CEE7 /* FacebookInfo.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				30AA4CD31D975EE50007CD81 /* StudentLinkUserDefaults.swift in Sources */,
 				7E6BBEFE1D97A85F00F3D065 /* DataStorage.swift in Sources */,
 				30AA4CD51D97605C0007CD81 /* UIViewController+Extras.swift in Sources */,
+				7E7233EE1DA2A9030001CEE7 /* FacebookInfo.swift in Sources */,
 				7E68FD091D97453200809FB5 /* scheduleViewController.swift in Sources */,
 				7E6BBF081D97DD6500F3D065 /* NotesCollectionViewController.swift in Sources */,
 				30AA4CDD1D97794E0007CD81 /* HomeViewController.swift in Sources */,

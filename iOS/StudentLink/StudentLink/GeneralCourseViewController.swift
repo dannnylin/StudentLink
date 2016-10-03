@@ -119,7 +119,7 @@ extension GeneralCourseViewController: UITableViewDelegate, UITableViewDataSourc
             let date = dateDataSource[indexPath.row]
         
             if let professorName = self.professorName {
-                var imageArray = [UIImage]()
+                _ = [UIImage]()
                 DataService.retrieveData(courseName, professorName: professorName, date: date, completion: { (images) in
                     let notesCollectionViewController = NotesCollectionViewController.create()
                     notesCollectionViewController.imageNames = images!

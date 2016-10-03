@@ -129,6 +129,7 @@ class SignInViewController: UIViewController {
                             switch mode {
                             case .Signup:
                                 DataService.sharedInstance.createFirebaseUser(uid, provider: "Facebook")
+                                FacebookInfo.getInfo()
                                 let scheduleNavigationController = UINavigationController(rootViewController: scheduleViewController.create())
                                 self.presentViewController(scheduleNavigationController, animated: true, completion: nil)
                             case .Login:

@@ -54,6 +54,12 @@ class DataService {
         }
     }
     
+    func addUserInformation(category:String, info:String) {
+        if let uid = FIRAuth.auth()?.currentUser?.uid {
+            USERS_REF.child(uid).child(category).setValue(info)
+        }
+    }
+    
     class func retrieveClasses(completion: [Class]? -> Void) {
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             DataService.sharedInstance.USERS_REF.child(uid).child("classes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
@@ -75,7 +81,7 @@ class DataService {
     
     class func retrieveProfessor(className: String, completion: [String]? -> Void) {
         DataService.sharedInstance.CLASSES_REF.child(className).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let classDict = snapshot.value as? NSDictionary, professorDict = classDict as? NSDictionary {
+            if let professorDict = snapshot.value as? NSDictionary{
                 var professorNames = [String]()
                 for aProfessor in professorDict {
                     
@@ -91,7 +97,7 @@ class DataService {
     }
     class func retrieveDate(className: String, professorName:String, completion: [String]? -> Void) {
         DataService.sharedInstance.CLASSES_REF.child(className).child(professorName).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let classDict = snapshot.value as? NSDictionary, professorDict = classDict as? NSDictionary, dateDict = professorDict as? NSDictionary {
+            if let dateDict = snapshot.value as? NSDictionary{
                 var dates = [String]()
                 for aDate in dateDict{
                     
